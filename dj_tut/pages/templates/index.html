@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Participant {{participant_id}}{% endblock %}
+
+{% block content %}
+<ul>
+	{% for participant in all_participants %}
+	<li><a href="/{{participant.dataset}}/{{participant.participant_id}}/">{{participant.participant_id}}</a></li>
+	{% endfor %}
+</ul>
+
+{% endblock %}
